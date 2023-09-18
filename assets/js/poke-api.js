@@ -1,6 +1,7 @@
 const pokeApi = {};
 
 function convertPokeApiDetailsToPokemon(pokeDetail){
+    console.log(pokeDetail)
     const pokemon = new Pokemon();
 
     pokemon.number = pokeDetail.id;
