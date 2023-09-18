@@ -185,11 +185,17 @@ button:hover{
     width: 50%;
     height: 80%;
     z-index: 3;
-    display: flex;
-    flex-direction: column;
   }
 
-  #seta {
+  #moreDetails-header{
+    display: flex;
+    justify-content: start;
+    gap: 12rem;
+    padding: 0.5rem 1rem;
+  }
+
+  #close-btn{
+    background-color: transparent;
     position: absolute;
     padding: 20px;
     margin: 10px;
@@ -198,6 +204,19 @@ button:hover{
     border-width: 10 10 5px 5px;
     transform: rotate(45deg);
   }
+  #close-btn:hover{
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  #moreDetails-header h1{
+    justify-self: center;
+  }
+
+  #moreDetails-content{
+    padding: 1rem 1.5rem;
+  }
+
 /* media query */
 
 @media screen and (min-width: 380px) {
