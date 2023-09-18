@@ -18,22 +18,41 @@ function moreDetails(){
 
             pokemonNameTitle.innerText = pokemonsDetails[current.id].name;
 
-            moreDetailsContent.classList = `${pokemonsDetails[current.id].type}`
+            moreDetailsContent.classList = `${pokemonsDetails[current.id].type}`;
 
             moreDetailsContent.innerHTML = `
             <img src="${pokemonsDetails[current.id].photo}" class="more-details-photo" alt="${pokemonsDetails[current.id].name}">
-            <div>
-                <div class="items">HP:${pokemonsDetails[current.id].hp}</div>
-                <div class="items">ATTACK:${pokemonsDetails[current.id].attack}</div>
-                <div class="items">SPECIAL ATTACK:${pokemonsDetails[current.id].specialAttack}</div>
-                <div class="items">HEIGHT:${pokemonsDetails[current.id].height}</div>
-                <div class="items">WEIGHT:${pokemonsDetails[current.id].weight}</div>
-                <div class="items">DEFENSE:${pokemonsDetails[current.id].defense}</div>
-                <div class="items">SPEED:${pokemonsDetails[current.id].speed}</div>    
+            <div id ="pokemonsDetails">
+                <div class="items">
+                    HP:
+                        <span id="hp" style="width:${pokemonsDetails[current.id].hp}%;">
+                            ${pokemonsDetails[current.id].hp}
+                        </span>
+                </div>
+                <div class="items">
+                     ATTACK:
+                     <span id="attack" style="width:${pokemonsDetails[current.id].attack}%;">
+                        ${pokemonsDetails[current.id].attack} 
+                    </span>
+                </div>
+                <div class="items">
+                    SPECIAL ATTACK:
+                        <span id="specialAttack" style="width:${pokemonsDetails[current.id].specialAttack}%;">
+                            ${pokemonsDetails[current.id].specialAttack}
+                        </span>
+                </div>
+                <div class="items" >
+                    DEFENSE:
+                        <span id="defense" style="width:${pokemonsDetails[current.id].defense}%;">
+                            ${pokemonsDetails[current.id].defense}
+                        </span>
+                </div>
+                <div class="items" >SPEED:${pokemonsDetails[current.id].speed}</div>    
+                <div class="items" >HEIGHT:${pokemonsDetails[current.id].height}</div>
+                <div class="items" >WEIGHT:${pokemonsDetails[current.id].weight}</div>
             </div>`
-
-
         });
+        
     };
 
     //close more details window
