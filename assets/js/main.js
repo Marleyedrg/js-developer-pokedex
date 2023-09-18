@@ -6,10 +6,18 @@ const maxRecord = 151;
 const limit = 10;
 let offset = 0;
 
+const pokemonsDetails = {};
+
 function loadPokemonItems(offset, limit ){
 
     function convertPokemonToLi(pokemon){
-        //console.log(pokemon.types)
+        // Save object pokemonsDetails of pokemons
+        pokemonsDetails[pokemon.number] = {
+            ...pokemon,
+        }
+        // Save object pokemonsDetails of pokemons
+        
+
         return `<li class="pokemon ${pokemon.type}" id="${pokemon.number}">
                     <span class="number">#${pokemon.number}</span>
                     <span class="name">${pokemon.name}</span>
@@ -27,14 +35,7 @@ function loadPokemonItems(offset, limit ){
     pokeApi.getPokemons(offset, limit).then((pokemons = []) =>{
         const newHtml = pokemons.map(convertPokemonToLi).join('');
         pokemonList.innerHTML += newHtml; 
-        moreDetails();
-    
-        // const listItems = [];
-    
-        // for (let  i = 0;  i < pokemons.length;  i++) {
-        //     const pokemon = pokemons[i];
-        //     listItems.push(convertPokemonToLi(pokemon))
-        // }
+        moreDetails(pokemonsDetails);
     
     })
 }
