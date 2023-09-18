@@ -1,5 +1,5 @@
 function moreDetails(){
-    const moreDetailsBox = document.getElementById("moreDetails");
+    const moreDetailsBox = document.getElementById("moreDetails-window");
     const moreDetailsContent = document.getElementById("moreDetails-content");
     const pokemonNameTitle = document.getElementById("pokemon-name");
     const closeBtn = document.getElementById("close-btn");

@@ -176,7 +176,7 @@ button:hover{
     transition:ease-in-out 100ms;
 }
 
-#moreDetails {
+#moreDetails-window {
     font-family:  'Noto Serif',sans-serif;
     position: fixed;
     top: 50%;
